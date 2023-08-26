@@ -17,7 +17,7 @@ const NavLinks = () => {
     },
     {
       name: 'Blog',
-      path: '/Blog'
+      path: '/blog'
     },
 
   ]

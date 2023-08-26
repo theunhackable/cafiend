@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Oswald } from 'next/font/google'
 import Navbar from './lib/Navbar'
+import Footer from './lib/Footer'
 
 const oswald = Oswald({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={oswald.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )
