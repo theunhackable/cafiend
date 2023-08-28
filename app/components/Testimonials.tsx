@@ -59,7 +59,7 @@ const Testimonials = () => {
           rows={1}
           cols={1}
           gap={10}
-          autoplay={5000}
+          autoplay={3000}
           
           loop
           containerStyle={{display: 'flex', flexDirection: 'col', justifyContent: 'center', }}
@@ -67,14 +67,14 @@ const Testimonials = () => {
           arrowLeft={
             <AiOutlineLeft
               size={50}
-              className='absolute top-1/2 left-[-35px] z-10 -translate-y-1/2 cursor-pointer rounded-md bg-primary border border-dark  text-2xl'
+              className='absolute top-1/2 left-[-35px] z-1 -translate-y-1/2 cursor-pointer rounded-md bg-primary border border-dark  text-2xl'
             />
           }
 
           arrowRight={
             <AiOutlineRight
               size={50}
-              className='absolute top-1/2 right-[-35px] z-10 -translate-y-1/2 cursor-pointer rounded-md bg-primary border border-dark  text-2xl '
+              className='absolute top-1/2 right-[-35px] -translate-y-1/2 cursor-pointer rounded-md bg-primary border border-dark  text-2xl '
               
             />
           }

@@ -40,12 +40,12 @@ const CofeeDesc = () => {
        
       <div id='desc-wrapper' className='m-40 mb-0 flex flex-col items-center justify-center gap-5'>
         <div id='desc-container' className='flex '>
-          <div id='desc-left' className='flex flex-col gap-5 w-1/2'>
-            <h1 className='text-6xl leading-tight font-bold text-left'>
-              COFFEE IS A FRUIT
+          <div id='desc-left' className='gap-5 w-1/2 h-fit sticky top-24'>
+            <h1 className='text-5xl leading-tight font-bold text-left'>
+            WHAT MAKES OUR COFFEE BEST?
             </h1>
             <p className=''>
-              Coffee beans are actually the seeds of a cherry-like fruit that is grown on bushes. Even though coffee is actually a seed, it&apos;s called a bean because of its resemblance to actual beans.
+            Coffee can be served hot or cold and can be prepared in a variety of ways, such as drip brewing, French press, espresso, and more. The flavor and strength of the coffee depend on the type of beans used, the roasting process, and the brewing method.
             </p>
           </div>
           
