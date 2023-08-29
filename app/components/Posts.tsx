@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import React from 'react'
-
+import Image from 'next/image';
+import React from 'react';
+import {posts} from '../data/data';
 
 type Props = {
   title: string,
@@ -8,10 +8,10 @@ type Props = {
   image_url: string,
 }
 
-const Post = ({ title, date, image_url }: Props) => {
+export const Post = ({ title, date, image_url }: Props) => {
   return (
         <div id="blog-card" className=" photo w-[400px] overflow-clip">
-          <div className="blog-img">
+          <div className="blog-img overflow-hidden">
             <Image className='rounded-md' src={`/images/${image_url}`} alt={`${image_url}`} width={400} height={300} />
           </div>
           <p className=' my-6'>
@@ -25,23 +25,7 @@ const Post = ({ title, date, image_url }: Props) => {
 }
 
 
-const posts = [
-  {
-    image_url: 'cofee-blog-1-1.png',
-    date: 'Apr 20, 2023',
-    title: 'COFFEE: FUEL FOR PRODUCTIVITY AND FOCUS'
-  },
-  {
-    image_url: 'cofee-blog-2-1.png',
-    date: 'Apr 20, 2023',
-    title: 'THE CULTURE AND HISTORY OF COFFEE.'
-  },
-  {
-    image_url: 'cofee-blog-7-1.png',
-    date: 'Apr 20, 2023',
-    title: 'COFFEE: A STIMULANT FOR CREATIVITY.'
-  }
-]
+const topPosts = posts.slice(0,3) 
 
 const Posts = () => {
   return (
@@ -51,9 +35,13 @@ const Posts = () => {
         OUR RECENT POSTS
       </h1>
 
-      <div id="blogs-container" className='flex mt-16 flex-wrap items-center justify-center gap-16'>
+      <div id="blogs-con<div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center items-center'>
+        
 
-        {posts.map((post, ind) => ( <Post key={ind} {...post} /> ))}
+        </div>
+tainer" className='flex mt-16 flex-wrap items-center justify-center gap-16'>
+
+        {topPosts.map((post, ind) => ( <Post key={ind} {...post} /> ))}
         
       </div>
     </section>

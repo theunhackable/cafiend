@@ -1,22 +1,8 @@
 "use client"
-import React, { useState } from 'react'
 import { FaQuoteRight } from 'react-icons/fa';
 import {AiOutlineLeft, AiOutlineRight} from 'react-icons/ai'
 import Carousel from 'better-react-carousel';
-const testimonials = [
-  {
-    name: 'ANN DEN SMITH',
-    position: 'MANAGER',
-    quote: "but not too many times. I know that if I set my mind to do something,I will achieve it."
-  },
-  {
-    name: 'RENIE JOHN',
-    position: 'OWNER',
-    quote: "I'm a very stubborn person. I think it has helped me over my career. I'm sure it has hindered me at times as well, but not too many times. I know that if I set my mind to do something,I will achieve it."
-  
-  }
-
-]
+import { testimonials } from '../data/data';
 
 type Props = {
   name: string
@@ -45,7 +31,6 @@ const TestimonialCard = ({ name, position, quote }: Props) => {
 const shit = testimonials.map((testimonial, ind) => (  <TestimonialCard key={ind} {...testimonial} />))
       
 const Testimonials = () => {
-  const [ind, setInd] = useState(0);
   
   return (
     <section id='testimonial-section' className='py-32 flex flex-col items-center justify-center bg-primary'>

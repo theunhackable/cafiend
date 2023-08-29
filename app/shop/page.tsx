@@ -1,6 +1,5 @@
 import React from 'react'
 import Testimonials from '../components/Testimonials'
-import Products from '../components/Products'
 import ProductLine from '../lib/ProductLine'
 
 const page = () => {
