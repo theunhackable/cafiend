@@ -1,18 +1,20 @@
 import Image from 'next/image';
 import React from 'react';
 import {posts} from '../data/data';
+import Link from 'next/link';
 
 type Props = {
   title: string,
   date: string,
-  image_url: string,
+  small_image_url: string,
+  ind: number
 }
 
-export const Post = ({ title, date, image_url }: Props) => {
+export const Post = ({ title, date, small_image_url, ind}: Props) => {
   return (
-        <div id="blog-card" className=" photo w-[400px] overflow-clip">
+        <Link href={`/blog/${ind}`}id="blog-card" className=" photo w-[400px] overflow-clip">
           <div className="blog-img overflow-hidden">
-            <Image className='rounded-md' src={`/images/${image_url}`} alt={`${image_url}`} width={400} height={300} />
+            <Image className='rounded-md' src={`/images/${small_image_url}`} alt={`${small_image_url}`} width={400} height={300} />
           </div>
           <p className=' my-6'>
             {date}
@@ -20,7 +22,7 @@ export const Post = ({ title, date, image_url }: Props) => {
           <h3 className='font-extrabold text-2xl text-wrap leading-tight'>
           {title}
           </h3>
-        </div>
+        </Link>
   )
 }
 
@@ -41,7 +43,7 @@ const Posts = () => {
         </div>
 tainer" className='flex mt-16 flex-wrap items-center justify-center gap-16'>
 
-        {topPosts.map((post, ind) => ( <Post key={ind} {...post} /> ))}
+        {topPosts.map((post, ind) => ( <Post key={ind} {...post} ind={ind} /> ))}
         
       </div>
     </section>

@@ -1,47 +1,54 @@
 export const posts:Post[] = [
     {
-      image_url: 'cofee-blog-1-1.png',
+      small_image_url: 'cofee-blog-1-1.png',
+      large_image_url: 'cofee-blog-1-2.png',
       date: 'Apr 20, 2023',
       title: 'COFFEE: FUEL FOR PRODUCTIVITY AND FOCUS',
       desc: 'Coffee is a popular beverage enjoyed by millions of people around the world.'
     },
     {
-      image_url: 'cofee-blog-2-1.png',
+      small_image_url: 'cofee-blog-2-1.png',
+      large_image_url: 'cofee-blog-2-2.jpg',
       date: 'Apr 20, 2023',
       title: 'THE CULTURE AND HISTORY OF COFFEE.',
       desc: 'Coffee is a popular beverage enjoyed by millions of people around the world.'
 
     },
     {
-      image_url: 'cofee-blog-7-1.png',
+      small_image_url: 'cofee-blog-7-1.png',
+      large_image_url: 'cofee-blog-7-2.jpg',
       date: 'Apr 20, 2023',
       title: 'COFFEE: A STIMULANT FOR CREATIVITY.',
       desc: 'Coffee is a popular beverage enjoyed by millions of people around the world.'
 
     },
     {
-      image_url: 'cofee-blog-3-1.png',
+      small_image_url: 'cofee-blog-3-1.png',
+      large_image_url: 'cofee-blog-3-2.png',
       date: 'Apr 20, 2023',
       title: 'COFFEE: A STIMULANT FOR CREATIVITY.',
       desc: 'Coffee is a popular beverage enjoyed by millions of people around the world.'
 
     },
     {
-      image_url: 'cofee-blog-4-1.png',
+      small_image_url: 'cofee-blog-4-1.png',
+      large_image_url: 'cofee-blog-4-2.png',
       date: 'Apr 20, 2023',
       title: 'COFFEE: A STIMULANT FOR CREATIVITY.',
       desc: 'Coffee is a popular beverage enjoyed by millions of people around the world.'
 
     },
     {
-      image_url: 'cofee-blog-5-1.png',
+      small_image_url: 'cofee-blog-5-1.png',
+      large_image_url: 'cofee-blog-5-2.png',
       date: 'Apr 20, 2023',
       title: 'COFFEE: A STIMULANT FOR CREATIVITY.',
       desc: 'Coffee is a popular beverage enjoyed by millions of people around the world.'
 
     },
     {
-      image_url: 'cofee-blog-6-1.png',
+      small_image_url: 'cofee-blog-6-1.png',
+      large_image_url: 'cofee-blog-6-2.png',
       date: 'Apr 20, 2023',
       title: 'BOLD AND SMOOTH: COFFEE DELIGHT',
       desc: 'Coffee is a popular beverage enjoyed by millions of people around the world.'

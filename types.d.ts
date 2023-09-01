@@ -1,8 +1,10 @@
 type Post = {
-  image_url: string
+      small_image_url: string,
+      large_image_url: string,
       date: string,
       title: string,
       desc: string
+
 }
 
 type Testimonial = {

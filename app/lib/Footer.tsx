@@ -25,7 +25,7 @@ const InstaImage = ({image_url}: Props) => {
 
 const InstaImages = () => {
   return (
-    <div id="insta-images" className='my-16 flex flex-wrap justify-center items-center overflow-hidden'>
+    <div id="insta-images" className='mb-16 flex flex-wrap justify-center items-center overflow-hidden'>
       {images.map((image, ind) => ( <InstaImage key={ind} image_url={image} /> ))}
     </div>
   )
@@ -36,7 +36,7 @@ const Footer = () => {
   return (
     <footer className='bg-dark text-primary'>
       <div id="instaimages">
-        <div className='flex justify-center items-center'>
+        <div className='flex items-center'>
           <InstaImages />
         </div>
       </div>
