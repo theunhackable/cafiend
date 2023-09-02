@@ -43,6 +43,7 @@ const About = () => {
             <h2 className='text-5xl font-extrabold leading-tight'>
               THE JOURNEY OF COFFEE FARM
             </h2>
+            
             <p>
               Coffee is a brewed drink made from roasted coffee beans, which are the seeds of berries from the Coffee a plant.
             </p>
