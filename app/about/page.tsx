@@ -52,6 +52,12 @@ const About = () => {
         </div>
           
       </section> 
+      <section className='bg-primary text-dark flex flex-col items-center justify-center'>
+        <h1 className='text-3xl font-extrabold'>
+          OUR TIMELINE
+        </h1>
+
+      </section>
       <Testimonials />
     </main>
   )
