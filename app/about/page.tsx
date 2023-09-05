@@ -2,6 +2,25 @@ import React from 'react'
 import Testimonials from '../components/Testimonials'
 import Image from 'next/image'
 
+const timeline = [
+  {
+    year: 2000,
+    description: "Coffee is introduced to the Arabian Peninsula, where it becomes popular as a stimulating drink. The world's first coffee shops are opened in UK."
+  },
+  {
+    year: 2010,
+    description: "Coffee becomes an important commodity in international trade, particularly in the Middle East and Europe.The first machine is invented in Italy"
+  },
+  {
+    year: 2016,
+    description: "Coffee consumption continues to grow around the world, and innovations in transportation and technology make it easier to produce and distribute coffee on a large scale."
+  },
+  {
+    year: 2020,
+    description: "Coffee continues to be one of the most popular beverages in the world, with millions of people enjoying it every day. New brewing techniques and flavors continue to emerge."
+  }
+]
+
 const About = () => {
   return (
     <main id='about-main' className='bg-primary'>
@@ -54,9 +73,21 @@ const About = () => {
           
       </section> 
       <section className='bg-primary text-dark flex flex-col items-center justify-center'>
-        <h1 className='text-3xl font-extrabold'>
+        <h1 className='text-5xl font-extrabold'>
           OUR TIMELINE
         </h1>
+       {
+          timeline.map((item, index) => (
+            <div key={index} className='container flex flex-col items-center align-center my-8'>
+              <h2 className='text-3xl font-extrabold text-center my-2'>
+                {item.year}
+              </h2>
+              <p className='text-center max-w-xl'>
+                {item.description}
+              </p>
+            </div>
+          ))
+       }
 
       </section>
       <Testimonials />
