@@ -10,9 +10,9 @@ const Navbar = () => {
     <>
         <TopMessage />
         <header id='header' className='sticky top-0 z-10'>
-            <nav id='nav' className='bg-primary  flex justify-between px-40 items-center gap p-3 shadow-md'>
+            <nav id='nav' className='bg-primary  flex justify-between max-md:px-2 px-40 items-center gap p-3 shadow-md'>
                 
-                <div id="nav-links" className='flex justify-between items-center text-xl gap-5 font-bold'>
+                <div id="nav-links" className='flex justify-between max-lg:hidden items-center text-xl gap-5 font-bold'>
                     <NavLinks />
                 </div>
 

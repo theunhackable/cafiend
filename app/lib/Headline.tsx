@@ -5,7 +5,7 @@ type HeadLineProps = {
 
 const HeadLine = ({title, items}: HeadLineProps) => {
   return (
-    <div id="container" className="m-6 p-5 border border-white/20 rounded-md w-fill">
+    <div id="container" className="lg:m-6 max-lg:my-5 p-5 border border-white/20 rounded-md w-fill">
       <h2 className='font-extrabold text-3xl'>
         {title}
       </h2>

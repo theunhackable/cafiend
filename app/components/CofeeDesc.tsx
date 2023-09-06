@@ -27,7 +27,7 @@ const CofeeDesc = () => {
   
   return (
     <section id='coffee-desc' className='flex flex-col items-center py-32  bg-dark text-primary'>
-      <div id="container" className='mb-20 px-72'>
+      <div id="container" className='mb-20 lg:px-72'>
         <h1 className='text-6xl leading-tight font-bold text-center'>
           CAFFEINE INFUSED DELIGHT
         </h1>
@@ -38,9 +38,9 @@ const CofeeDesc = () => {
 
       <video  src='/videos/cofee-from-machine.webm'  muted autoPlay loop />
        
-      <div id='desc-wrapper' className='m-40 mb-0 flex flex-col items-center justify-center gap-5'>
-        <div id='desc-container' className='flex '>
-          <div id='desc-left' className='gap-5 w-1/2 h-fit sticky top-24'>
+      <div id='desc-wrapper' className='m-10 lg:m-40 mb-0 flex flex-col items-center justify-center gap-5'>
+        <div id='desc-container' className='flex max-lg:flex-col'>
+          <div id='desc-left' className='gap-5 lg:w-1/2 h-fit sticky max-lg:static top-24'>
             <h1 className='text-5xl leading-tight font-bold text-left'>
             WHAT MAKES OUR COFFEE BEST?
             </h1>
@@ -49,7 +49,7 @@ const CofeeDesc = () => {
             </p>
           </div>
           
-          <div id='desc-right' className='flex flex-col gap-5 w-1/2 px-32'>
+          <div id='desc-right' className='flex flex-col gap-5 lg:w-1/2 lg:pl-32'>
 
             {headlines.map((headline, index) =>  <HeadLine key={index} {...headline} /> )}
           </div>

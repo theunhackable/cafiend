@@ -6,13 +6,13 @@ import Button from '../lib/Button'
 const Hero = () => {
   return (
     <section id='hero' className=' min-h-screen py-[7.5rem] bg-dark'>
-      <div className=" flex items-center justify-between gap-12 mx-[15.75rem]">
+      <div className=" flex max-lg:flex-col items-center justify-between gap-12 sm:mx-[15.75rem]">
         
         <div id="hero-heading-wrapper">
           <h1 className='text-6xl leading-tight text-primary font-bold'>
             REVIVE YOUR COFFEE LOVE
           </h1>
-          <p className=' text-primary pr-20'>
+          <p className=' text-primary sm:pr-20'>
             Coffee contains caffeine, a natural stimulant that can help increase alertness and reduce fatigue. It also contains antioxidants and other beneficial compounds.
           </p>
 
