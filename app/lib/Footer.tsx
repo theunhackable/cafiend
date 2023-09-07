@@ -40,9 +40,9 @@ const Footer = () => {
           <InstaImages />
         </div>
       </div>
-      <div className='flex max-sm:flex-col md:mx-48 my-12 justify-between items-start'>
-        <div id="address">
-          <h3 className='text-left font-extrabold text-2xl'>
+      <div className='flex max-sm:flex-col md:mx-48 my-12 justify-between items-center md:items-start'>
+        <div id="address" className='text-center md:text-left'>
+          <h3 className=' font-extrabold text-2xl'>
           CONTACT US
           </h3>
           <ul>
@@ -71,9 +71,9 @@ const Footer = () => {
           </p>
         </div>
         
-        <div id="timings" className='text-right'>
+        <div id="timings" className='text-center md:text-right'>
 
-          <h3 className='text-right font-extrabold text-2xl'> 
+          <h3 className='font-extrabold text-2xl'> 
             OPEN HOUR
           </h3>
           <ul>
