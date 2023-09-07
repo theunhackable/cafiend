@@ -22,7 +22,7 @@ const Blog = ({params:{ blogId }}: Props) => {
   else {
     const { date, large_image_url } = posts[ind]
     const Content = (
-      <section id='blog-content' className='flex flex-col items-center justify-center bg-primary text-dark'>
+      <section id='blog-content' className='p-4 flex flex-col items-center justify-center bg-primary text-dark'>
       <div className="container max-w-4xl">
         <h1 className='text-5xl font-extrabold text-dark leading-tight'>
           BOLD AND SMOOTH: COFFEE DELIGHT.

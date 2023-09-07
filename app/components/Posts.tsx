@@ -12,7 +12,7 @@ type Props = {
 
 export const Post = ({ title, date, small_image_url, ind}: Props) => {
   return (
-        <Link href={`/blog/${ind}`}id="blog-card" className=" m-4 photo w-[400px] overflow-clip">
+        <Link href={`/blog/${ind}`}id="blog-card" className=" m-4 photo overflow-clip">
           <div className="blog-img overflow-hidden">
             <Image className='rounded-md' src={`/images/${small_image_url}`} alt={`${small_image_url}`} width={400} height={300} />
           </div>

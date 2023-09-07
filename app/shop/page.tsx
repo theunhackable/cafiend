@@ -10,7 +10,7 @@ const page = () => {
     </header>
     
     <section className='mx-auto px-4 flex flex-col justify-center items-center'>
-      <h1 className='font-extrabold text-5xl my-16'>
+      <h1 className='max-sm:text-center font-extrabold text-5xl my-16'>
         OUR BLENDS DELIVER
       </h1>
       <ProductLine />

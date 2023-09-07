@@ -29,13 +29,13 @@ const About = () => {
       </header>
       
       <section className='container mx-auto px-4'>
-        <div className='flex items-center justify-center'>
-          <div className='w-1/2'>
-            <h2 className='py-24 text-5xl font-extrabold leading-tight text-dark'>
+        <div className='flex max-lg:flex-col items-center justify-center'>
+          <div className='lg:w-1/2'>
+            <h2 className='py-12 lg:py-24 text-5xl font-extrabold leading-tight text-dark'>
               THE PERFECT PAIRING: COFFEE AND DESSERTS COMPLEMENT EACH OTHER
             </h2>
           </div>
-          <div className='w-1/2 py-24 px-12 border-l-2 border-black'>
+          <div className='lg:w-1/2 py-2 lg:py-24 lg:px-12 lg:border-l-2 border-black'>
             <p className='my-2'>
               Coffee is a popular and beloved beverage that is made from roasted coffee beans, which come from the berries of the Coffee a plant. The drink is enjoyed by millions of people.
             </p>
@@ -43,13 +43,14 @@ const About = () => {
               Coffee is often enjoyed as a morning or afternoon pick-me-up, but it can also be savored as a relaxing and enjoyable beverage. In addition to its taste and aroma, coffee has been shown to have a variety of health benefits, including increased alertness and improved mental focus. It is also a source of antioxidants and other beneficial compounds.
             </p>
             <div id="images" className='w-full flex items-center justify-end static'>
-              <Image className='absolute right-[340px]' src="/images/signatures.webp" alt="signature" width={200} height={20}/>
+              <Image className='absolute right-[20%]' src="/images/signatures.webp" alt="signature" width={200} height={20}/>
 
               <Image src="/images/original-stamp-black.webp" alt="original" width={150} height={100} />
             </div>
           </div>
         </div>
       </section>   
+
       <section className='bg-dark text-primary flex flex-col items-center justify-center'>
       <div className='container flex flex-wrap p-12 justify-center items-center gap-10'>
           
