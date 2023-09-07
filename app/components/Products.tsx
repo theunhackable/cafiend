@@ -5,10 +5,10 @@ import ProductLine from '../lib/ProductLine'
 const Products = () => {
   return (
     <section className='flex flex-col items-center py-32 bg-primary'>
-      <h1 className='text-6xl leading-tight text-dark font-bold'>
+      <h1 className='mx-2 text-6xl max-lg:text-center leading-tight text-dark font-bold'>
         OUR BLENDS DELIVER
       </h1>
-      <p>
+      <p className='max-md:text-center m-2'>
         {`Hot, Cold, Sweet or straight up, we've got the brew for you.`}
       </p>
 

@@ -14,7 +14,7 @@ const TestimonialCard = ({ name, position, quote }: Props) => {
 
   return (
 
-      <div  className='flex flex-col items-center justify-center px-20'>
+      <div  className='flex flex-col items-center justify-center px-8 md:px-20'>
           <FaQuoteRight className=' mt-24 text-5xl text-dark' />
         <p className=' my-6 text-center text-dark'>&quot; {quote} &quot;</p>
         <h3 className='text-xl font-extrabold'>
@@ -39,7 +39,7 @@ const Testimonials = () => {
         OUR TESTMONIAL
       </h1>
 
-      <div className='w-3/4'>
+      <div className='md:w-3/4 '>
         <Carousel
           rows={1}
           cols={1}

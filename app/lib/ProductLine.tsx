@@ -14,7 +14,7 @@ type ProductProps = {
 
 const Product = ({name, price, image_url}: ProductProps) => {
   return (
-    <div className='flex flex-col text-center items-center border-2 hover:border-dark py-16 md:px-32 w-fit'>
+    <div className='flex flex-col text-center items-center border-2 hover:border-dark py-16 max-lg:px-12 mx-2 md:px-32 w-fit'>
       
       <h2 className='text-3xl font-extrabold'>
         {name}
