@@ -35,7 +35,7 @@ const Testimonials = () => {
   return (
     <section id='testimonial-section' className='py-32 flex flex-col items-center justify-center bg-primary'>
 
-      <h1 className='text-5xl leading-tight text-dark font-bold'>
+      <h1 className='m-4  max-md:text-center text-5xl leading-tight text-dark font-bold'>
         OUR TESTMONIAL
       </h1>
 

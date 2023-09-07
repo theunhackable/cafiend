@@ -40,8 +40,8 @@ const Footer = () => {
           <InstaImages />
         </div>
       </div>
-      <div className='flex max-sm:flex-col md:mx-48 my-12 justify-between items-center md:items-start'>
-        <div id="address" className='text-center md:text-left'>
+      <div className='flex max-sm:flex-col mx-12 lg:mx-48 my-12 justify-between items-center md:items-start'>
+        <div id="address" className='mx-4 text-center md:text-left'>
           <h3 className=' font-extrabold text-2xl'>
           CONTACT US
           </h3>
@@ -66,7 +66,7 @@ const Footer = () => {
 
         <div id="heading" className='flex flex-col items-center'>
           <Image src='/images/cafiend-logo-dark.svg' alt='logo' width={200} height={200} />
-          <p className='my-6'>
+          <p className='my-6 text-center'>
             Hot, Cold, Sweet or straight up, we&apos;ve got the brew for you.
           </p>
         </div>

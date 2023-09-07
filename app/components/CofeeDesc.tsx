@@ -31,7 +31,7 @@ const CofeeDesc = () => {
         <h1 className='text-6xl leading-tight font-bold text-center'>
           CAFFEINE INFUSED DELIGHT
         </h1>
-        <p className='text-center'>
+        <p className='text-center m-4'>
           Coffee can be enjoyed in a variety of forms, from a simple cup of black coffee to more elaborate drinks like lattes and cappuccinos. It is a popular social beverage and often enjoyed as a part of social gatherings, meetings, or alone as a moment of relaxation.
         </p>
       </div>
