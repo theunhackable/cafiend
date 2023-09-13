@@ -12,7 +12,7 @@ type Props = {
 
 export const Post = ({ title, date, small_image_url, ind}: Props) => {
   return (
-        <Link href={`/blog/${ind}`}id="blog-card" className=" m-4 photo overflow-clip">
+        <Link href={`/blog/${ind}`}id="blog-card" className="photo overflow-clip w-fit">
           <div className="blog-img overflow-hidden">
             <Image className='rounded-md' src={`/images/${small_image_url}`} alt={`${small_image_url}`} width={400} height={300} />
           </div>
@@ -37,11 +37,7 @@ const Posts = () => {
         OUR RECENT POSTS
       </h1>
 
-      <div id="blogs-con<div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center items-center'>
-        
-
-        </div>
-tainer" className='flex mt-16 flex-wrap items-center justify-center gap-16'>
+      <div id="blogs-container" className=' m-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center items-center'>
 
         {topPosts.map((post, ind) => ( <Post key={ind} {...post} ind={ind} /> ))}
         

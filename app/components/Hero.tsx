@@ -6,7 +6,7 @@ import Button from '../lib/Button'
 const Hero = () => {
   return (
     <section id='hero' className=' min-h-screen py-[7.5rem] bg-dark'>
-      <div className=" flex max-lg:flex-col items-center justify-evenly gap-12">
+      <div className=" flex max-lg:flex-col items-center justify-center gap-12">
         
         <div id="hero-heading-wrapper" className='flex flex-col lg:items-start items-center justify-center mx-2 lg:w-1/2'>
           <h1 className='text-5xl max-lg:text-center lg:text-6xl leading-tight text-primary font-bold'>
