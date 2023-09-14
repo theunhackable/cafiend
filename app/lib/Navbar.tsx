@@ -7,9 +7,15 @@ import Cart from './Cart'
 import { AnimatePresence, motion } from 'framer-motion'
 import {BiMenuAltRight} from 'react-icons/bi'
 import {AiOutlineClose} from 'react-icons/ai'
+import Button from './Button'
 
 const Navbar = () => {
     const [isOpened, setIsOpened] = useState(false);
+    const [cartOpened, setCartOpened] = useState(false);
+    const handleCart = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault();
+        setCartOpened((prev) => !prev);
+    }
     return (
     <>
         <TopMessage />
@@ -26,7 +32,7 @@ const Navbar = () => {
 
                 <div id='search-cart' className='flex gap-5 justify-between items-center'>
                     
-                    <Cart />
+                    <Cart handleCart={handleCart} />
                     
                     <button onClick={(e) => {e.preventDefault(); setIsOpened((prev) => !prev)}} className='lg:hidden text-primary bg-dark p-2 rounded-md'>
                         {isOpened ? (<AiOutlineClose type='button' className='text-xl'/>) : (<BiMenuAltRight type='button' className='text-xl' />) }
@@ -54,8 +60,28 @@ const Navbar = () => {
                     </motion.div>
                 </div>
             )}
-            </AnimatePresence>
+        </AnimatePresence>
 
+        {/* for cart */}
+        
+        <AnimatePresence>
+            {cartOpened && (
+                <div className=' z-10 fixed top-0 w-screen h-screen bg-transparent backdrop-blur-lg' onClick={() => {setCartOpened((prev) => !prev)}}>
+                    <motion.div 
+                    initial={{ x: "150%" }}
+                    animate={{ x: 0 }}
+                    exit={{ x:"150%" }}
+                    transition={{ duration: 0.2 }}
+                    className='flex flex-col fixed bg-primary p-4 pt-24  top-16 right-0 max-sm:w-full max-md:w-[60%] w-[40%] h-full items-center'>
+                        <Button text='Checkout' className='
+                            p-10 py-3 mt-6 w-fit
+                            bg-primary hover:bg-dark text-dark hover:text-primary
+                            border border-black 
+                            rounded-md' />
+                    </motion.div>
+                </div>
+            )}
+        </AnimatePresence>
         
     </>
   )

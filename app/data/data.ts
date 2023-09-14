@@ -70,3 +70,34 @@ export const testimonials: Testimonial[] = [
   }
 
 ]
+
+export const products: Product[] = [
+  {
+    name: 'FRAPPE',
+    price: 85.41,
+    image_url: 'frappe.png'
+  },
+  {
+    name: 'BLACK',
+    price: 85.41,
+    image_url: 'black.png'
+  },
+  {
+    name: 'NITRO',
+    price: 85.41,
+    image_url: 'nitro.png'
+  },
+  {
+    name: 'WHITE',
+    price: 85.41,
+    image_url: 'white.png'
+  },{
+    name: 'BREW',
+    price: 85.41,
+    image_url: 'brew.png'
+  },{
+    name: 'MOCHA',
+    price: 85.41,
+    image_url: 'mocha.png'
+  }
+]

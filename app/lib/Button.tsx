@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 
 type Props = {
@@ -6,8 +7,13 @@ type Props = {
 }
 
 const Button = ({text, className}: Props) => {
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault()
+    console.log('clicked')
+  }
   return (
-    <button className={className}>
+    <button onClick={handleClick} className={className}>
       {text}
   </button>
   )

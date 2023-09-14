@@ -1,18 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
 import Button from './Button'
-
-
-type ProductProps = {
-  name: string,
-  price: number,
-  image_url: string
-}
+import { products } from '../data/data'
 
 
 
 
-const Product = ({name, price, image_url}: ProductProps) => {
+
+const Product = ({name, price, image_url}: Product) => {
   return (
     <div className='flex flex-col text-center items-center border-2 hover:border-dark py-16 max-lg:px-12 mx-2 md:px-32 w-fit'>
       
@@ -36,36 +31,7 @@ const Product = ({name, price, image_url}: ProductProps) => {
   )
 }
 
-let products = [
-  {
-    name: 'FRAPPE',
-    price: 85.41,
-    image_url: 'frappe.png'
-  },
-  {
-    name: 'BLACK',
-    price: 85.41,
-    image_url: 'black.png'
-  },
-  {
-    name: 'NITRO',
-    price: 85.41,
-    image_url: 'nitro.png'
-  },
-  {
-    name: 'WHITE',
-    price: 85.41,
-    image_url: 'white.png'
-  },{
-    name: 'BREW',
-    price: 85.41,
-    image_url: 'brew.png'
-  },{
-    name: 'MOCHA',
-    price: 85.41,
-    image_url: 'mocha.png'
-  }
-]
+
 
 const ProductLine = () => {
   
