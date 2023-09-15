@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import TopMessage from './TopMessage'
 import Image from 'next/image'
 import NavLinks from './NavLinks'
@@ -8,8 +8,11 @@ import { AnimatePresence, motion } from 'framer-motion'
 import {BiMenuAltRight} from 'react-icons/bi'
 import {AiOutlineClose} from 'react-icons/ai'
 import Button from './Button'
+import CartContext from '../Context/store'
+import CartItems from './CartItems'
 
 const Navbar = () => {
+    const {cart, setCart} = useContext(CartContext)
     const [isOpened, setIsOpened] = useState(false);
     const [cartOpened, setCartOpened] = useState(false);
     const handleCart = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -66,20 +69,22 @@ const Navbar = () => {
         
         <AnimatePresence>
             {cartOpened && (
-                <div className=' z-10 fixed top-0 w-screen h-screen bg-transparent backdrop-blur-lg' onClick={() => {setCartOpened((prev) => !prev)}}>
+                <>
+                <div className=' z-10 fixed top-0 w-screen h-[100%] bg-black/80 backdrop-blur-md' onClick={() => {setCartOpened((prev) => !prev)}} />
                     <motion.div 
-                    initial={{ x: "150%" }}
+                    initial={{ x: "100%" }}
                     animate={{ x: 0 }}
                     exit={{ x:"150%" }}
                     transition={{ duration: 0.2 }}
-                    className='flex flex-col fixed bg-primary p-4 pt-24  top-16 right-0 max-sm:w-full max-md:w-[60%] w-[40%] h-full items-center'>
-                        <Button text='Checkout' className='
-                            p-10 py-3 mt-6 w-fit
-                            bg-primary hover:bg-dark text-dark hover:text-primary
-                            border border-black 
-                            rounded-md' />
+                    className='z-10 flex flex-col overflow-y-auto fixed bg-primary p-4 pt-24  top-16 right-0 max-sm:w-full max-md:w-[60%] w-[40%] h-full items-center'>
+                        {cart.length === 0 ? <h1 className="text-3xl">Your cart is empty</h1> :(
+                            <>
+
+                                <CartItems />
+                            </>
+                        )}
                     </motion.div>
-                </div>
+                </>
             )}
         </AnimatePresence>
         

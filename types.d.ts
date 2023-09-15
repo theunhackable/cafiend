@@ -17,9 +17,10 @@ type Product = {
   name: string,
   price: number,
   image_url: string
-}
+};
 
 type CartItem = {
-  product: Product,
   quantity: number,
-}
+} & Product;
+
+type Cart = CartItem[];

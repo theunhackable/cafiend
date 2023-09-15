@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '../lib/Button'
 import ProductLine from '../lib/ProductLine'
+import Link from 'next/link'
 
 const Products = () => {
   return (
@@ -12,12 +12,14 @@ const Products = () => {
         {`Hot, Cold, Sweet or straight up, we've got the brew for you.`}
       </p>
 
-      <Button text='ALL PRODUCTS' className='
-        p-10 py-3 my-12 w-fit
+      <Link href='/shop' className='
+        p-10 py-3 my-12 w-fit font-inconsolata
         bg-primary hover:bg-dark text-dark hover:text-primary
          border border-black 
          rounded-md
-      '/>
+      '>
+        ALL PRODUCTS
+      </Link>
       <ProductLine />
 
     </section>

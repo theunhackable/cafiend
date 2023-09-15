@@ -1,22 +1,49 @@
 "use client"
 
-import { createContext, useContext, Dispatch, SetStateAction, useState } from "react"
+import { createContext, Dispatch, SetStateAction, use, useEffect, useState } from "react"
 
 type ContextProps = {
-    cart: string[],
-    setCart: Dispatch<SetStateAction<string[]>>
+    cart: Cart,
+    setCart: Dispatch<SetStateAction<Cart>>
+    total: number,
+    setTotal: Dispatch<SetStateAction<number>>
 }
 
 const CartContext = createContext<ContextProps>({
     cart: [],
-    setCart: () => null
+    total: 0,
+    setCart: () => null,
+    setTotal: () => null
 })
 
 export const CartProvider = ({children}: any) => {
-    const [cart, setCart] = useState<string[]>([])
+    
+    const [cart, setCart] = useState<Cart>([])
+    const [total, setTotal] = useState<number>(0)
+
+    useEffect(() => {
+        const cart = localStorage.getItem('cart')
+        if(cart) {
+            const parsedCart = JSON.parse(cart)
+            let total = 0
+            parsedCart.forEach((item: CartItem) => {
+                total += item.price * item.quantity
+            })
+            setTotal(total);
+            setCart(parsedCart)
+            
+        }
+        else {
+            localStorage.setItem('cart', JSON.stringify([]))
+            setTotal(0);
+            setCart([])
+        }
+    }, [])
     return (
-        <CartContext.Provider value={{cart, setCart}}>
+        <CartContext.Provider value={{cart, setCart, total, setTotal}}>
             {children}
         </CartContext.Provider>
     )
 }
+
+export default CartContext

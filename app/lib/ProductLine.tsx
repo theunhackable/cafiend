@@ -1,13 +1,29 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
-import Button from './Button'
+import React, { useContext } from 'react'
 import { products } from '../data/data'
-
-
-
-
+import CartContext from '../Context/store'
 
 const Product = ({name, price, image_url}: Product) => {
+
+  const {cart, setCart} = useContext(CartContext)
+
+  const addToCart = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    const product = {name, price, image_url}
+    cart.find(item => item.name === product.name) ? setCart((prev) => {
+      const newCart = [...prev]
+      const index = newCart.findIndex(item => item.name === product.name)
+      newCart[index].quantity++
+      localStorage.setItem('cart', JSON.stringify(newCart))
+      return newCart
+    }): setCart((prev) => {
+      const newCart = [...prev, {...product, quantity: 1}]
+      localStorage.setItem('cart', JSON.stringify(newCart));
+      return newCart;
+    })
+
+  }
   return (
     <div className='flex flex-col text-center items-center border-2 hover:border-dark py-16 max-lg:px-12 mx-2 md:px-32 w-fit'>
       
@@ -21,12 +37,14 @@ const Product = ({name, price, image_url}: Product) => {
 
       <Image src={`/images/${image_url}`} alt={image_url} width={222} height={400}/>
       
-      <Button text='ADD TO CART' className='
+      <button onClick={addToCart} className='
         p-10 py-3 mt-6 w-fit
        bg-primary hover:bg-dark text-dark hover:text-primary
         border border-black 
         rounded-md
-      ' />
+      '>
+        ADD TO CART
+      </button>
     </div>
   )
 }

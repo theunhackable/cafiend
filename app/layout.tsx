@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { Inter, Oswald } from 'next/font/google'
 import Navbar from './lib/Navbar'
 import Footer from './lib/Footer'
-
+import {CartProvider} from './Context/store'
 const oswald = Oswald({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -20,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={oswald.className}>
+        <CartProvider>
         <Navbar />
         {children}
         <Footer />
+        </CartProvider>
       </body>
     </html>
   )
