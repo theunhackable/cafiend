@@ -85,7 +85,7 @@ const CartItems = () => {
           );
         })}
         <p>
-          Total: $ {total}
+          Total: $ {total.toFixed(2)}
         </p>
         
         <AnimatePresence>
