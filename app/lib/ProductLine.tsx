@@ -6,7 +6,7 @@ import CartContext from '../Context/store'
 
 const Product = ({name, price, image_url}: Product) => {
 
-  const {cart, setCart} = useContext(CartContext)
+  const {cart, setCart, total, setTotal} = useContext(CartContext)
 
   const addToCart = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
@@ -15,11 +15,13 @@ const Product = ({name, price, image_url}: Product) => {
       const newCart = [...prev]
       const index = newCart.findIndex(item => item.name === product.name)
       newCart[index].quantity++
+      setTotal((prev) => prev + newCart[index].price)
       localStorage.setItem('cart', JSON.stringify(newCart))
       return newCart
     }): setCart((prev) => {
       const newCart = [...prev, {...product, quantity: 1}]
       localStorage.setItem('cart', JSON.stringify(newCart));
+      setTotal((prev) => prev + product.price)
       return newCart;
     })
 
