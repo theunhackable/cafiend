@@ -5,7 +5,7 @@ Cafiend is a place where you can find exotic coffee and order them.
 
 ## Live Link
 
-[https://cafiend.vercel.app/](https://cafiend-chi.vercel.app/)
+[https://cafiend-chi.vercel.app/](https://cafiend-chi.vercel.app/)
 ## Installation
 
 use git clone to clone the repository
